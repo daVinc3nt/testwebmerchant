@@ -117,10 +117,10 @@ const Sidebar: React.FC<MyComponentProps> = ({ toggleCollapseMobile })  => {
         </div>
 
         {!toggleCollapse && (
-        <div className="flex rounded-lg items-center mt-10 p-3 w-full h-24 bg-LitghRedGradient">
+        <div className="flex rounded-lg overflow-hidden items-center mt-10 p-3 w-full h-24 bg-LitghRedGradient">
           <div style={!toggleCollapse? { width: "5rem" }: { width: "0rem" }}>
             <Image
-              className="rounded-full object-cover"
+              className="rounded-full object-cover overflow-hidden"
               // src={user.img || "/noavatar.png"}
               src={"/SunGlass.jpg"}
               alt=""
@@ -129,9 +129,9 @@ const Sidebar: React.FC<MyComponentProps> = ({ toggleCollapseMobile })  => {
             />
           </div>
           {!toggleCollapse && (
-          <div className="flex flex-col">
-            <span className="font-bold text-xl text-white">Trần Vĩ Quang</span>
-            <span className="text-xs text-white">Thành viên</span>
+          <div className="flex flex-col overflow-hidden">
+            <span className="font-bold text-xl text-white overflow-hidden">Trần Vĩ Quang</span>
+            <span className="text-xs text-white overflow-hidden">Thành viên</span>
           </div>
           )}
         </div>
