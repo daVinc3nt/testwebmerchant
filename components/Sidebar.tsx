@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import React, { useState, useMemo } from "react";
 import siteMetadata from '../data/siteMetadata'
 import Image from "next/image";
+import { motion, Variants } from "framer-motion";
 import MobileMenu from "./NavigationBar/MobileMenu";
 import {
   ArticleIcon,
@@ -43,6 +44,12 @@ const Sidebar: React.FC<MyComponentProps> = ({ toggleCollapseMobile })  => {
     () => menuItems.find((menu) => menu.link === router.pathname),
     [router.pathname]
   );
+
+  const leftSideVariant: Variants = {
+    initial: { x: 20, opacity: 0 },
+    enter: { x: 0, opacity: 1 },
+    exit: { x: -20, opacity: 0 }
+  }
 
   const wrapperClasses = classNames(
     "h-screen hidden z-50 lg:px-4 lg:flex pt-8 pb-4 bg-ligth justify-between flex-col",
@@ -119,9 +126,10 @@ const Sidebar: React.FC<MyComponentProps> = ({ toggleCollapseMobile })  => {
         {!toggleCollapse && (
         <div className="flex rounded-lg items-center mt-10 p-3 w-full h-24 bg-LitghRedGradient">
           <div style={!toggleCollapse? { width: "5rem" }: { width: "0rem" }}>
-            <Image
+            <motion.img
+              variants={leftSideVariant} initial="initial" animate="enter" exit="exit"
+              transition={{ duration: .7 }}
               className="rounded-full object-cover"
-              // src={user.img || "/noavatar.png"}
               src={"/SunGlass.jpg"}
               alt=""
               width="70"
@@ -130,14 +138,20 @@ const Sidebar: React.FC<MyComponentProps> = ({ toggleCollapseMobile })  => {
           </div>
           {!toggleCollapse && (
           <div className="flex flex-col">
-            <span className="font-bold text-xl text-white">Trần Vĩ Quang</span>
-            <span className="text-xs text-white">Thành viên</span>
+            <motion.span 
+            variants={leftSideVariant} initial="initial" animate="enter" exit="exit"
+            transition={{ duration: .7 }}
+            className="font-bold text-xl text-white">Trần Vĩ Quang</motion.span>
+            <motion.span 
+            variants={leftSideVariant} initial="initial" animate="enter" exit="exit"
+            transition={{ duration: .7 }}
+            className="text-xs text-white">Thành viên</motion.span>
           </div>
           )}
         </div>
         )}
         
-        <div className="flex flex-col items-start mt-10">
+        <div className={`flex flex-col items-start ${!toggleCollapse?'mt-10':'mt-44'} `}>
           {menuItems.map(({ icon: Icon, ...menu }) => {
             const classes = getNavItemClasses(menu);
             return (
@@ -212,9 +226,10 @@ const Sidebar: React.FC<MyComponentProps> = ({ toggleCollapseMobile })  => {
         {!toggleCollapseMobile && (
         <div className="flex rounded-lg items-center mt-10 p-2 w-full h-24 bg-LitghRedGradient">
           <div style={!toggleCollapseMobile? { width: "5rem" }: { width: "0rem" }}>
-            <Image
+            <motion.img
+              variants={leftSideVariant} initial="initial" animate="enter" exit="exit"
+              transition={{ duration: .7 }}
               className="rounded-full object-cover"
-              // src={user.img || "/noavatar.png"}
               src={"/SunGlass.jpg"}
               alt=""
               width="60"
@@ -223,8 +238,14 @@ const Sidebar: React.FC<MyComponentProps> = ({ toggleCollapseMobile })  => {
           </div>
           {!toggleCollapseMobile && (
           <div className="flex flex-col">
-            <span className="font-bold text-md text-white">Trần Vĩ Quang</span>
-            <span className="text-xs text-white">Thành viên</span>
+            <motion.span 
+              variants={leftSideVariant} initial="initial" animate="enter" exit="exit"
+              transition={{ duration: .7 }}
+              className="font-bold text-md text-white whitespace-nowrap">Trần Vĩ Quang</motion.span>
+            <motion.span 
+              variants={leftSideVariant} initial="initial" animate="enter" exit="exit"
+              transition={{ duration: .7 }}
+              className="text-xs text-white whitespace-nowrap">Thành viên</motion.span>
           </div>
           )}
         </div>
