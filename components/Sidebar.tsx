@@ -26,11 +26,11 @@ import { log } from "console";
 
 const menuItems = [
   { id: 1, label: "Thêm mới", icon: AddIcon, link: "/dashboard/order" },
-  { id: 2, label: "Định vị", icon: CompassIcon, link: "/dashboard/posts" },
-  { id: 3, label: "Số dư", icon: WalletIcon, link: "/dashboard/balance" },
-  { id: 4, label: "Lịch sử", icon: HistoryIcon, link: "/dashboard/orderhistory" },
-  { id: 5, label: "Thống kê", icon: GraphIcon, link: "/dashboard/reportpage"},
-  { id: 6, label: "Trợ giúp", icon: HelpIcon, link: "/dashboard/helpcenter"}
+  // { id: 2, label: "Định vị", icon: CompassIcon, link: "/dashboard/posts" },
+  { id: 2, label: "Số dư", icon: WalletIcon, link: "/dashboard/balance" },
+  { id: 3, label: "Lịch sử", icon: HistoryIcon, link: "/dashboard/orderhistory" },
+  { id: 4, label: "Thống kê", icon: GraphIcon, link: "/dashboard/reportpage"},
+  { id: 5, label: "Trợ giúp", icon: HelpIcon, link: "/dashboard/helpcenter"}
 ];
 interface MyComponentProps {
   toggleCollapseMobile: boolean;
