@@ -19,6 +19,7 @@ module.exports = {
         light: {
           DEFAULT: "#FAFBFC",
           lighter: "#F3F4F6",
+          primary: {"50":"#eff6ff","100":"#dbeafe","200":"#bfdbfe","300":"#93c5fd","400":"#60a5fa","500":"#3b82f6","600":"#2563eb","700":"#1d4ed8","800":"#1e40af","900":"#1e3a8a","950":"#172554"}
         },
 
 
@@ -75,6 +76,9 @@ module.exports = {
         LitghRedGradient:
             'linear-gradient(-45deg, #ff5959, #ff4040, #ff0d6e, #ff8033,#d74177)',
         confeti: 'url("/confetti.png")',
+        whiteRedGradient:
+            'linear-gradient(45deg, #FF0000, #FF7878)'
+
       },
       height:{
         104: '26rem',
@@ -105,6 +109,7 @@ module.exports = {
       },
       animation: {
         'shake': 'shake 0.82s cubic-bezier(.36, .07,.19,.97) both',
+        'hoverScale': 'hover-scale 5s cubic-bezier(.36, .07,.19,.97) infinite',
         },
         keyframes: {
           'shake': {
@@ -121,6 +126,12 @@ module.exports = {
                   transform: 'translate3d(4px, 0, 0)'
           }
         }
+      },
+      'hover-scale': {
+        '0%, 100%': { transform: 'scale(1)' },
+        '40%, 60%': { transform: 'scale(1.2) rotate(0)'},
+        '46%, 50%, 54%, 42%, 58%': { transform: 'scale(1.2) rotate(5deg)' },
+        '48%, 52% , 44%, 56%': { transform: 'scale(1.2) rotate(-5deg)' },
       }
     },
   },
