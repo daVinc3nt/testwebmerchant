@@ -24,7 +24,7 @@ export class OTP {
         }
         this._phone_number = phone_number;
         this._email = email;
-        this._baseUrl = "https://test-1hut.onrender.com/api/v1/otp";
+        this._baseUrl = "https://tdfastlogistic.onrender.com/api/v1/otp";
     }
     /**
      * Method to get phone number
