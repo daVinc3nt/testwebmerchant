@@ -30,7 +30,7 @@ const Wrapper = ({ children }: LayoutProps) => {
           </header>
         </div>
         {!toggleCollapseMobile && 
-        <div className="lg:hidden flex-1 flex z-40 fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm">
+        <div className="md:hidden flex-1 flex z-40 fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm">
         </div>}
 
         <div className="bg-primary flex flex-1 text-black">

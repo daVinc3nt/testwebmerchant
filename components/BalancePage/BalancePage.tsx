@@ -132,7 +132,7 @@ const BalancePage = () => {
               <div className="ml-2 w-1/2 border-r-[1px] border-gray-300 pr-2"><motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.9 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.2 }}
                   className="w-full h-full flex items-center justify-center"
               >
                 <BsCashCoin className="mt-1  text-xl"/>
@@ -142,7 +142,7 @@ const BalancePage = () => {
               <div className="mr-2 w-1/2 pl-2"><motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.9 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.2 }}
                   onClick={handleStatisticsClick}
                   className="w-full h-full flex items-center justify-center"
               >
@@ -189,7 +189,7 @@ const BalancePage = () => {
                       initial="initial"
                       animate={controls}
                       exit="exit"
-                      transition={{ duration: 0.5 }}
+                      transition={{ duration: 0.4 }}
                       id="popover-right"
                       role="tooltip"
                       className={`-top-1/2 absolute z-10 ${
@@ -206,7 +206,7 @@ const BalancePage = () => {
                   <motion.button
                       whileHover={{ scale: 1.2 }}
                       whileTap={{ scale: 0.9 }}
-                      transition={{ duration: 0.3 }}
+                      transition={{ duration: 0.2 }}
                       className="absolute h-6 right-4 px-1.5 bg-white hover:bg-gray-300 border-2 border-gray-300 text-gray-500 text-xs font-bold rounded"
                   >
                     Thêm
@@ -241,7 +241,7 @@ const BalancePage = () => {
                       initial="initial"
                       animate={controls2}
                       exit="exit"
-                      transition={{ duration: 0.5 }}
+                      transition={{ duration: 0.4 }}
                       id="popover-right"
                       role="tooltip"
                       className={`-top-1/2 absolute  ${
@@ -258,7 +258,7 @@ const BalancePage = () => {
                   <motion.button
                       whileHover={{ scale: 1.2 }}
                       whileTap={{ scale: 0.9 }}
-                      transition={{ duration: 0.3 }}
+                      transition={{ duration: 0.2 }}
                       className="absolute h-6 right-4 px-1.5 bg-white hover:bg-gray-300 border-2 border-gray-300 text-gray-500 text-xs font-bold rounded z-20"
                   >
                     Kích hoạt
@@ -268,7 +268,7 @@ const BalancePage = () => {
           </motion.div>
           <motion.div 
             variants={leftSideVariant} initial="initial" animate="enter" exit="exit"
-            transition={{ duration: .5, delay: .6}}
+            transition={{ duration: .5, delay: .5}}
             className="mt-1 mb-1 bg-white rounded ml-0 sm:ml-1 lg:ml-0">
               <div className="h-10 w-full rounded-t pl-4 pr-4">
                 <div className="h-full w-full text-base font-semibold pt-3 border-b-2 border-gray-500"><p>Phương thức thanh toán</p></div>
@@ -281,7 +281,7 @@ const BalancePage = () => {
                   <motion.button
                       whileHover={{ scale: 1.2 }}
                       whileTap={{ scale: 0.9 }}
-                      transition={{ duration: 0.3 }}
+                      transition={{ duration: 0.2 }}
                       className="absolute h-6 right-4 px-1.5 bg-white hover:bg-gray-300 border-2 border-gray-300 text-gray-500 text-xs font-bold rounded"
                   >
                     Liên kết
@@ -297,7 +297,7 @@ const BalancePage = () => {
                   <motion.button
                       whileHover={{ scale: 1.2 }}
                       whileTap={{ scale: 0.9 }}
-                      transition={{ duration: 0.3 }}
+                      transition={{ duration: 0.2 }}
                       className="absolute h-6 right-4 px-1.5 bg-white hover:bg-gray-300 border-2 border-gray-300 text-gray-500 text-xs font-bold rounded"
                   >
                     Liên kết
@@ -309,7 +309,7 @@ const BalancePage = () => {
                   <motion.button
                       whileHover={{ scale: 1.2 }}
                       whileTap={{ scale: 0.9 }}
-                      transition={{ duration: 0.3 }}
+                      transition={{ duration: 0.2  }}
                       className="absolute h-6 right-4 px-1.5 bg-white hover:bg-gray-300 border-2 border-gray-300 text-gray-500 text-xs font-bold rounded"
                   >
                     Thêm
@@ -321,7 +321,7 @@ const BalancePage = () => {
         <div ref={scrollRef} className='static w-full grow lg:p-3 lg:pl-0 lg:h-[52.3rem]'>
           {currentForm == 0 && <motion.div 
             variants={rightSideVariant}
-            initial="initial" animate="enter" transition={{ duration: .8 }}
+            initial="initial" animate="enter" transition={{ duration: .7 }}
             className="bg-white h-full lg:rounded-xl block">
             <div className="h-14 w-full rounded-t-xl pl-4 pr-4">
               <div className="h-full w-full text-black text-xl font-semibold pt-4 border-b-2 border-gray-500"><p>Lịch sử giao dịch</p></div>
@@ -330,14 +330,14 @@ const BalancePage = () => {
           </motion.div>}
           {currentForm == 1 && <motion.div 
             variants={rightSideVariant}
-            initial="initial" animate="enter" transition={{ duration: .8 }}
+            initial="initial" animate="enter" transition={{ duration: .7 }}
             className=" bg-white h-full lg:rounded-xl block">
             <div className="h-14 w-full rounded-t-xl pl-4 pr-4">
               <div className="h-full w-full text-black text-xl font-semibold pt-2 border-b-2 border-gray-500 flex">
                 <motion.button
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 0.9 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.2 }}
                     onClick={()=>{setCurrentForm(0)}}
                     className="w-8 h-8 mt-1 rounded-full hover:bg-gray-200 mb-2 flex items-center justify-center"
                 >
