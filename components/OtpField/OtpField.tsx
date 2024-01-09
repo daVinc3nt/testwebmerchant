@@ -38,6 +38,7 @@ const OTPField: FC<OptFieldProps> = ({showOtp, setshowOtp, user, otp}) => {
         {
             console.log("bắt đầu check");
             let CheckOtp = parseFloat(otp1.join(""));
+            console.log(CheckOtp);
             otp.verifyOTP({phone_number: user.phone_number, otp: CheckOtp })
             .then(valid => {
                 if (!valid) {
