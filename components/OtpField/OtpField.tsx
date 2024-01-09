@@ -34,8 +34,7 @@ const OTPField: FC<OptFieldProps> = ({showOtp, setshowOtp, user, otp}) => {
         else setActiveOTPIndex(currentOTPIndex + 1);
         setOtp(newOTP);
         //verify
-        console.log(otp1.some((element) => element !== ""));
-        if ( otp1.some((element) => element !== ""))
+        if ( !otp1.some((element) => element === "") )
         {
             console.log("bắt đầu check");
             console.log(otp1.length === 4);
